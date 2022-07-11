@@ -1,0 +1,88 @@
+<div *ngFor="let About of Abouts" class="px-4 mt-10 lg:mt-20">
+    <div class="2xl:container 2xl:mx-auto md:px-6 px-4 bg-white py-10">
+        <h1 class="text-center text-3xl text-blue-700 font-weight-bold lg:pb-16 pb-10"><b><i>
+                    <u>ABOUT
+                        ME</u>
+                </i></b></h1>
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-8">
+            <div class="">
+                <img src={{About.ImageLink}} alt="" />
+            </div>
+            <div class="">
+                <h1 class="lg:text-2xl xl:text-3xl text-4xl font-weight-bold">{{About.Title}}
+                </h1>
+                <br />
+                <p>{{About.Description}}</p>
+                <br />
+                <div class="grid lg:grid-cols-2 grid-cols-1  gap-0">
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Name:</b> {{About.Name}}
+                        </h1>
+                        <br />
+                    </div>
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Birthday:</b> {{About.Birthday}}
+                        </h1>
+                        <br />
+                    </div>
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Degree:</b> {{About.Degree}}
+                        </h1>
+                        <br />
+                    </div>
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Experience:</b>
+                            {{About.Experience}}
+                        </h1>
+                        <br />
+                    </div>
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Phone:</b>
+                            {{About.Phone}}
+                        </h1>
+                        <br />
+                    </div>
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Email:</b>
+                            {{About.Email}}
+                        </h1>
+                        <br />
+                    </div>
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Address:</b>
+                            {{About.Address}}
+                        </h1>
+                        <br />
+                    </div>
+                    <div>
+                        <h1 class="lg:text-sm xl:text-xl text-xl font-weight-bold"><b>Freelance:</b>
+                            {{About.Freelance}}</h1>
+                        <br />
+                    </div>
+                </div>
+                <div class="flex pt-5">
+                    <a href="/Contact"
+                        class="rounded-full ... mr-4 bg-blue-600  hover:bg-blue-500 text-white py-3 px-7">Hire
+                        Me</a>
+                    <a href="/assets/Resume.pdf" target="_blank"
+                        class="rounded-full ... py-3 px-5 text-blue-600 hover:text-white border-2  hover:bg-blue-600 border-blue-600">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="isLogged" class="flex justify-around items-center mt-9 ">
+            <div>
+                <a routerLink="/Update-About/{{About._id}}" type="button"
+                    class="inline-block px-5 py-4 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"><span
+                        style="font-size: 20px;"><i class="fa-solid fa-pen-to-square"></i>
+                        ToEdit</span></a>
+            </div>
+            <div>
+                <button (click)="onDelete(About._id)" type="button"
+                    class="inline-block px-5 py-4 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"><span
+                        style="font-size: 20px;"><i class="fa-solid fa-trash"></i>
+                        Delete</span></button>
+            </div>
+        </div>
+    </div>
+</div>
