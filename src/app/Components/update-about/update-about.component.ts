@@ -22,7 +22,7 @@ export class UpdateAboutComponent implements OnInit {
     this.selectedFile = imageinput.files[0];
   }
   submit(): void {
-    // this.imageUploadIndicator = true;
+    this.imageUploadIndicator = true;
     if (this.selectedFile) {
       const { _id, Title, Description, Name, Birthday, Degree, Experience, Phone, Email, Address, Freelance, ImageId } = this.About;
       const formData = new FormData();

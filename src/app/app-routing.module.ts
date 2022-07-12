@@ -12,6 +12,8 @@ import { LoginRouteComponent } from './Components/login-route/login-route.compon
 import { ShowContactrQueryRouteComponent } from './Components/show-contactr-query-route/show-contactr-query-route.component';
 import { ProjectUpdateRouteComponent } from './Components/project-update-route/project-update-route.component';
 import { UpdateAboutRouteComponent } from './Components/update-about-route/update-about-route.component';
+import { UploadHeaderRouteComponent } from './Components/upload-header-route/upload-header-route.component';
+import { UpdateHeaderRouteComponent } from './Components/update-header-route/update-header-route.component';
 
 const routes: Routes = [
   { path: '', component: HomeRouteComponent },
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'Show-Contacts', component: ShowContactrQueryRouteComponent },
   { path: 'Update-Project/:id', component: ProjectUpdateRouteComponent },
   { path: 'Update-About/:id', component: UpdateAboutRouteComponent },
+  { path: 'Upload-Header', component: UploadHeaderRouteComponent },
+  { path: 'Update-Header/:id', component: UpdateHeaderRouteComponent },
 ];
 
 

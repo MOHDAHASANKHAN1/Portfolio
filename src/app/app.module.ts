@@ -36,6 +36,10 @@ import { ProjectUpdateRouteComponent } from './Components/project-update-route/p
 import { UpdateAboutRouteComponent } from './Components/update-about-route/update-about-route.component';
 import { UpdateAboutComponent } from './Components/update-about/update-about.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { UploadHeaderComponent } from './Components/upload-header/upload-header.component';
+import { UploadHeaderRouteComponent } from './Components/upload-header-route/upload-header-route.component';
+import { UpdateHeaderComponent } from './Components/update-header/update-header.component';
+import { UpdateHeaderRouteComponent } from './Components/update-header-route/update-header-route.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +73,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ProjectUpdateComponent,
     ProjectUpdateRouteComponent,
     UpdateAboutComponent,
-    UpdateAboutRouteComponent
+    UpdateAboutRouteComponent,
+    UploadHeaderComponent,
+    UploadHeaderRouteComponent,
+    UpdateHeaderComponent,
+    UpdateHeaderRouteComponent
   ],
   imports: [
     BrowserModule,

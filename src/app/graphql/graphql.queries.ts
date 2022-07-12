@@ -81,5 +81,29 @@ const Get_Single_About = gql`
     }
   }
 `
+const Get_Header = gql`
+  query{
+    Header{
+        _id,
+        Name,
+        ImageLink,
+        ImageId,
+        ResumeLink,
+        ResumeId
+    }
+  }
+`
+const Get_Single_Header = gql`
+  query Single_Header($_id:String!){
+    Single_Header(_id:$_id){
+        _id,
+        Name,
+        ImageLink,
+        ImageId,
+        ResumeLink,
+        ResumeId
+    }
+  }
+`
 
-export { Get_Project_Detailes, Get_Contacts, Get_About, Get__Single_Project_Detailes, Get_Single_About };
+export { Get_Project_Detailes, Get_Contacts, Get_About, Get__Single_Project_Detailes, Get_Single_About, Get_Header, Get_Single_Header };

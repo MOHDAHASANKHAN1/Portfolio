@@ -114,5 +114,27 @@ const Check_Cookie = gql`
     }
   }
 `
+const Add_Header = gql`
+  mutation Add_Header($Name:String!, $ResumeLink:String!, $ResumeId:String!, $ImageLink:String!, $ImageId:String!){
+  Add_Header(Name:$Name, ResumeLink:$ResumeLink, ResumeId:$ResumeId, ImageLink:$ImageLink, ImageId:$ImageId){
+       Success
+  }
+}
+`
+const Update_Header = gql`
+  mutation Update_Header($_id:String!, $Name:String!, $OldImageId:String!, $OldResumeId:String!, $ResumeLink:String!, $ResumeId:String!, $ImageLink:String!, $ImageId:String!){
+  Update_Header(_id:$_id, Name:$Name, OldImageId:$OldImageId,  OldResumeId:$OldResumeId, ResumeLink:$ResumeLink, ResumeId:$ResumeId, ImageLink:$ImageLink, ImageId:$ImageId){
+       Success
+  }
+}
+`
+const Delete_Header = gql`
+  mutation Delete_Header($_id:String!){
+  Delete_Header(_id:$_id){
+       Success
+  }
+}
+`
 
-export { Add_Project_Detailes, Add_Contact, Add_About, Signup, Login, Check_Cookie, Delete_Contact, Delete_Project_Detailes, Update_Project_Detailes, Delete_About, Update_About };
+
+export { Add_Project_Detailes, Add_Contact, Add_About, Signup, Login, Check_Cookie, Delete_Contact, Delete_Project_Detailes, Update_Project_Detailes, Delete_About, Update_About, Add_Header, Update_Header, Delete_Header };
