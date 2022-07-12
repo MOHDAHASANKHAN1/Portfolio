@@ -14,6 +14,8 @@ import { ProjectUpdateRouteComponent } from './Components/project-update-route/p
 import { UpdateAboutRouteComponent } from './Components/update-about-route/update-about-route.component';
 import { UploadHeaderRouteComponent } from './Components/upload-header-route/upload-header-route.component';
 import { UpdateHeaderRouteComponent } from './Components/update-header-route/update-header-route.component';
+import { UpdateSkillRouteComponent } from './Components/update-skill-route/update-skill-route.component';
+import { UploadSkillRouteComponent } from './Components/upload-skill-route/upload-skill-route.component';
 
 const routes: Routes = [
   { path: '', component: HomeRouteComponent },
@@ -30,6 +32,8 @@ const routes: Routes = [
   { path: 'Update-About/:id', component: UpdateAboutRouteComponent },
   { path: 'Upload-Header', component: UploadHeaderRouteComponent },
   { path: 'Update-Header/:id', component: UpdateHeaderRouteComponent },
+  { path: 'Upload-Skill', component: UploadSkillRouteComponent },
+  { path: 'Update-Skill/:id', component: UpdateSkillRouteComponent }
 ];
 
 

@@ -135,6 +135,26 @@ const Delete_Header = gql`
   }
 }
 `
+const Add_Skill = gql`
+  mutation Add_Skill($Name:String!, $Percentage:String!){
+  Add_Skill(Name:$Name, Percentage:$Percentage){
+       Success
+  }
+}
+`
+const Update_Skill = gql`
+  mutation Update_Skill($_id:String!, $Name:String!, $Percentage:String!){
+  Update_Skill(_id:$_id, Name:$Name, Percentage:$Percentage){
+       Success
+  }
+}
+`
+const Delete_Skill = gql`
+  mutation Delete_Skill($_id:String!){
+  Delete_Skill(_id:$_id){
+       Success
+  }
+}
+`
 
-
-export { Add_Project_Detailes, Add_Contact, Add_About, Signup, Login, Check_Cookie, Delete_Contact, Delete_Project_Detailes, Update_Project_Detailes, Delete_About, Update_About, Add_Header, Update_Header, Delete_Header };
+export { Add_Project_Detailes, Add_Contact, Add_About, Signup, Login, Check_Cookie, Delete_Contact, Delete_Project_Detailes, Update_Project_Detailes, Delete_About, Update_About, Add_Header, Update_Header, Delete_Header, Add_Skill, Update_Skill, Delete_Skill };

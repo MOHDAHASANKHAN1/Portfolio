@@ -40,6 +40,10 @@ import { UploadHeaderComponent } from './Components/upload-header/upload-header.
 import { UploadHeaderRouteComponent } from './Components/upload-header-route/upload-header-route.component';
 import { UpdateHeaderComponent } from './Components/update-header/update-header.component';
 import { UpdateHeaderRouteComponent } from './Components/update-header-route/update-header-route.component';
+import { UploadSkillComponent } from './Components/upload-skill/upload-skill.component';
+import { UploadSkillRouteComponent } from './Components/upload-skill-route/upload-skill-route.component';
+import { UpdateSkillComponent } from './Components/update-skill/update-skill.component';
+import { UpdateSkillRouteComponent } from './Components/update-skill-route/update-skill-route.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +81,11 @@ import { UpdateHeaderRouteComponent } from './Components/update-header-route/upd
     UploadHeaderComponent,
     UploadHeaderRouteComponent,
     UpdateHeaderComponent,
-    UpdateHeaderRouteComponent
+    UpdateHeaderRouteComponent,
+    UploadSkillComponent,
+    UploadSkillRouteComponent,
+    UpdateSkillComponent,
+    UpdateSkillRouteComponent
   ],
   imports: [
     BrowserModule,

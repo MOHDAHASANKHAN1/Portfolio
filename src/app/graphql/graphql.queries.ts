@@ -106,4 +106,23 @@ const Get_Single_Header = gql`
   }
 `
 
-export { Get_Project_Detailes, Get_Contacts, Get_About, Get__Single_Project_Detailes, Get_Single_About, Get_Header, Get_Single_Header };
+const Get_Skill = gql`
+  query{
+    Skill{
+        _id,
+        Name,
+        Percentage
+    }
+  }
+`
+const Get_Single_Skill = gql`
+  query Single_Skill($_id:String!){
+    Single_Skill(_id:$_id){
+        _id,
+        Name,
+        Percentage
+    }
+  }
+`
+
+export { Get_Project_Detailes, Get_Contacts, Get_About, Get__Single_Project_Detailes, Get_Single_About, Get_Header, Get_Single_Header, Get_Skill, Get_Single_Skill };

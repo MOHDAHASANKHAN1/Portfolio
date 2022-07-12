@@ -1,12 +1,12 @@
 <div class="flex justify-center mt-10 lg:mt-20 px-4">
-    <div *ngIf="imageUploadIndicator; else elseBlock">
+    <div *ngIf="uploadIndicator; else elseBlock">
         <img src="../../../assets/Images/Loading.gif" alt="">
     </div>
     <ng-template #elseBlock>
-        <div *ngIf="Header.Name!=''; else elseBlock" class="block p-6 rounded-lg shadow-lg bg-white w-full">
+        <div *ngIf="Skill.Name!=''; else elseBlock" class="block p-6 rounded-lg shadow-lg bg-white w-full">
             <form #formdata="ngForm" (ngSubmit)="submit()">
                 <label class="font-serif
-            text-xl">Header Name<span class="text-red-700">*</span></label>
+            text-xl">Skill Name<span class="text-red-700">*</span></label>
                 <div class="form-group mb-6">
                     <input type="text" class="form-control block
                w-full
@@ -22,32 +22,13 @@
                ease-in-out
                m-0
                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                        placeholder="Please Enter Header Name" required #Name="ngModel" name="Name"
-                        [(ngModel)]="Header.Name">
+                        placeholder="Please Enter Skill Name" required #Title="ngModel" name="Name"
+                        [(ngModel)]="Skill.Name">
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="form-group mb-6">
-                        <label class="font-serif text-xl">Select Image<span class="text-red-700">*</span></label>
-                        <input #imageinput (change)="selectimage(imageinput)" type="file" class="form-control
-               block
-               w-full
-               px-3
-               py-5
-               text-base
-               font-normal
-               text-gray-700
-               bg-white bg-clip-padding
-               border border-solid border-gray-300
-               rounded
-               transition
-               ease-in-out
-               m-0
-               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
-                    </div>
-                    <div class="form-group mb-6">
-                        <label class="font-serif text-xl">Select Resume<span class="text-red-700">*</span></label>
-                        <input #resumeinput (change)="selectresume(resumeinput)" type="file" class="form-control
-                               block
+                <label class="font-serif
+                            text-xl">Skill Percentage<span class="text-red-700">*</span></label>
+                <div class="form-group mb-6">
+                    <input type="text" class="form-control block
                                w-full
                                px-3
                                py-5
@@ -60,8 +41,9 @@
                                transition
                                ease-in-out
                                m-0
-                               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
-                    </div>
+                               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        placeholder="Please Enter Skill Percentage" required #Title="ngModel" name="Percentage"
+                        [(ngModel)]="Skill.Percentage">
                 </div>
                 <button [disabled]="formdata.invalid" type="submit" class="
             w-full
@@ -80,7 +62,7 @@
             active:bg-blue-800 active:shadow-lg
             transition
             duration-150
-            ease-in-out"><b>Update Header</b></button>
+            ease-in-out"><b>Update Skill</b></button>
             </form>
         </div>
         <ng-template #elseBlock>
